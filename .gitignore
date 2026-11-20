@@ -1,0 +1,28 @@
+# IntelliJ
+.idea/
+
+# Generated files
+out/
+target/
+build/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+
+# Logs
+*.log
+
+# Archive du projet
+backend.zip
