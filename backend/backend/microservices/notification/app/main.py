@@ -23,8 +23,8 @@ async def lifespan(app: FastAPI):
         instance_ip="127.0.0.1",
         instance_port=PORT,
         home_page_url=f"http://localhost:{PORT}/",
-        status_page_url=f"http://localhost:{PORT}/swagger-ui",
-        health_check_url=f"http://localhost:{PORT}/swagger-ui",
+        status_page_url=f"http://localhost:{PORT}/info",
+        health_check_url=f"http://localhost:{PORT}/health",
     )
 
     print("NOTIFICATION successfully registered with Eureka!")
@@ -50,6 +50,27 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+
+# ---- Health check ----
+@app.get("/health")
+async def health():
+    return {
+        "status": "UP",
+        "service": "NOTIFICATION"
+    }
+
+
+# ---- Service information ----
+@app.get("/info")
+async def info():
+    return {
+        "app": "NOTIFICATION",
+        "description": "Notification microservice",
+        "version": "1.0.0"
+    }
+
+
+# ---- Notification routes ----
 app.include_router(notification.router)
 
 

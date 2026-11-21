@@ -1,50 +1,49 @@
-# \# PROSIT 1 – Architecture Microservices
+# PROSIT 1 – Architecture Microservices
 
-# 
+## Présentation
 
-# \## Présentation
+Projet réalisé dans le cadre de l'atelier Architecture Microservices.
 
-# Projet réalisé dans le cadre de l'atelier Architecture Microservices.
+## Membres de l'équipe
 
-# 
+- Zeineb Jnene
+- Maram Ben Mahmoud
+- Aya Ben Aissa
+- Mohamed Ali Hmeme
 
-# \## Membres de l'équipe
+## Architecture
 
-# \- Zeineb Jnene
+Le projet contient les microservices suivants :
 
-# \- Maram Ben Mahmoud
+- Candidat
+- Candidature
+- Job
+- Meeting
+- Notification
+- Eureka Discovery Server
 
-# \- Aya Ben Aissa
+## Dashboard Eureka
 
-# \- Mohamed Ali Hmeme
+Capture d'écran du dashboard Eureka :
 
-# 
+![Dashboard Eureka](backend/backend/documentation/images/eureka-dashboard.png)
 
-# \## Architecture
+## Microservice Meeting
 
-# Le projet contient les microservices suivants :
+### Health
 
-# \- Candidat
+![Meeting Health](backend/backend/documentation/images/meeting-health.png)
 
-# \- Candidature
+### Info
 
-# \- Job
+![Meeting Info](backend/backend/documentation/images/meeting-info.png)
 
-# \- Meeting
+## Microservice Notification
 
-# \- Notification
+### Health
 
-# \- Eureka Discovery Server
+![Notification Health](backend/backend/documentation/images/notification-health.png)
 
-# 
+### Info
 
-# \## Dashboard Eureka
-
-# 
-
-# Capture d'écran du dashboard Eureka :
-
-# 
-
-# !\[Dashboard Eureka](backend/backend/documentation/images/eureka-dashboard.png)
-
+![Notification Info](backend/backend/documentation/images/notification-info.png)
