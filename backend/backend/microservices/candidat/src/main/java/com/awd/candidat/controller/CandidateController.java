@@ -18,6 +18,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+import jakarta.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/mic1/candidates")
 @Tag(name = "Candidates", description = "Manage candidates and link them to an address")
@@ -103,5 +104,9 @@ public class CandidateController {
             content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
     public CandidateResponse removeAddress(@Parameter(description = "Candidate id", example = "1") @PathVariable Long id) {
         return candidateService.removeAddress(id);
+    }
+    @GetMapping("/instance")
+    public String getInstance(HttpServletRequest request) {
+        return "Instance sur le port : " + request.getLocalPort();
     }
 }
